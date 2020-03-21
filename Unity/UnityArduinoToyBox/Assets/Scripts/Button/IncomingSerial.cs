@@ -16,8 +16,7 @@ public class IncomingSerial : MonoBehaviour
     string portName = "COM4";
     int baudRate = 9600;
 
-    void Start()
-    {
+    void Start() {
         connection = new SerialPort();
         connection.PortName = portName;
         connection.BaudRate = baudRate;
@@ -29,7 +28,9 @@ public class IncomingSerial : MonoBehaviour
         connection.ReadTimeout = 5;
         //connection.WriteTimeout = 5; //for use in code that writes
 
-        connection.Open();
+        if (connection.IsOpen) { connection.Close(); Debug.Log("PORT WAS OPEN!"); } 
+        else { connection.Open(); }
+
     }
 
     void Update() {
@@ -67,7 +68,7 @@ public class IncomingSerial : MonoBehaviour
     public static string SetPortName(string defaultPortName) {
         /*string portName;
 
-        //display ports somehow
+        //display ports to user somehow
         //print("Available Ports");
         foreach(string s in SerialPort.GetPortNames()) {
             //print("{0}, s);
