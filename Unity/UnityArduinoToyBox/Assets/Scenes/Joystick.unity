@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb38c9f2258251e41a218fe051e65185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coloredBox: {fileID: 335247142}
+  moveableBox: {fileID: 335247142}
 --- !u!4 &781876931
 Transform:
   m_ObjectHideFlags: 0

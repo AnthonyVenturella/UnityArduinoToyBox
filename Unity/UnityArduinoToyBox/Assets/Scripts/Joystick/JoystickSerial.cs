@@ -8,9 +8,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
 
+
 public class JoystickSerial : MonoBehaviour{
 
-    [SerializeField] GameObject coloredBox;
+    [SerializeField] GameObject moveableBox;
 
     static SerialPort connection;
 
@@ -48,15 +49,15 @@ public class JoystickSerial : MonoBehaviour{
 
             string buttonSerial = connection.ReadTo(",");
             string xAxisSerial = connection.ReadTo(",");
-            string yAxisSerial = connection.ReadLine();
+            string zAxisSerial = connection.ReadLine();
             int inputValue;
-            int X, Y;
+            int X, Z;
 
             if (buttonSerial == "1") {
                 Debug.Log("Recieved Button Press");
 
                 Color randomColor = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
-                coloredBox.GetComponent<MeshRenderer>().material.color = randomColor;
+                moveableBox.GetComponent<MeshRenderer>().material.color = randomColor;
             }
 
             if (int.TryParse(xAxisSerial, out inputValue)) {
@@ -66,13 +67,19 @@ public class JoystickSerial : MonoBehaviour{
             }
 
             if (int.TryParse(xAxisSerial, out inputValue)) {
-                Y = int.Parse(yAxisSerial);
+                Z = int.Parse(zAxisSerial);
             } else {
-                Y = -1;
+                Z = -1;
             }
 
+            //x and y axis are in values of 0-1023. A value of ~500 is the center with 0 and 1023 being the extremes
+            float xPos = mapValue(X, 0, 1023, -25, 25);
+            float zPos = mapValue(Z, 0, 1023, -25, 25);
 
+            Debug.Log("X Unity World Value is: " + xPos);
+            Debug.Log("Y Unity World Value is: " + zPos);
 
+            moveableBox.transform.position = new Vector3(xPos, 0f, zPos);
         }
     }
 
@@ -84,6 +91,10 @@ public class JoystickSerial : MonoBehaviour{
     private void OnDisable() {
         //closes the port on script disable. i.e. when a scene change happens if this isnt made persistent
         if (connection.IsOpen) { connection.Close(); }
+    }
+
+    public static float mapValue(float valueToMap, float fromMin, float fromMax, float toMin, float toMax) {
+        return (valueToMap - fromMin) / (fromMax - fromMin) * (toMax - toMin) + toMin;
     }
 
     //TODO

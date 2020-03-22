@@ -1,6 +1,6 @@
 const int Button = 13;
 const int XAxis = 0;
-const int YAxis = 1;
+const int ZAxis = 1;
 
 int buttonState = 1;
 
@@ -27,5 +27,5 @@ void loop() {
   Serial.print(',');
   Serial.print(analogRead(XAxis));
   Serial.print(',');
-  Serial.println(analogRead(YAxis));
+  Serial.println(analogRead(ZAxis));
 }
