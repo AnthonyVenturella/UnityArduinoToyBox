@@ -33,8 +33,8 @@
  *****************************************************************************/
 
 //Default values for button input and value to send to Serial
-static int Button = 13;
-static int SendVal = 1;
+const int Button = 13;
+const int SendVal = 1;
 
 int val1;         //for reading in a button pres
 int val2;         //for comparing in a debounce
