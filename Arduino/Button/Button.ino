@@ -1,6 +1,6 @@
 /** HEADER *******************************************************************
  * Author: Anthony Venturella                                                *
- * GitHub: https://github.com/AnthonyVenturella                              *
+ * GitHub: https://github.com/AnthonyVenturella/UnityArduinoToyBox           *
  *---------------------------------------------------------------------------*/
 /*  Description                                                              *
  *  Button:                                                                  *
@@ -32,7 +32,6 @@
  *                                                                           *
  *****************************************************************************/
 
-//Default values for button input and value to send to Serial
 const int Button = 13;
 const int SendVal = 1;
 

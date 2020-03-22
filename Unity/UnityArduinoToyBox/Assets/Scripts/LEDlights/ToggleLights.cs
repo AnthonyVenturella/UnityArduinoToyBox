@@ -29,23 +29,23 @@ public class ToggleLights : MonoBehaviour{
     }
 
     public void ToggleRed() {
-        //Serial write 1
         connection.WriteLine("1");
     }
 
     public void ToggleGreen() {
-        //Serial write 2
         connection.WriteLine("2");
     }
 
     public void ToggleYellow() {
-        //Serial write 3
         connection.WriteLine("3");
     }
 
     public void ToggleBlue() {
-        //Serial write 4
         connection.WriteLine("4");
+    }
+
+    public void TurnOff() {
+        connection.WriteLine("5");
     }
 
     private void OnApplicationQuit() {
