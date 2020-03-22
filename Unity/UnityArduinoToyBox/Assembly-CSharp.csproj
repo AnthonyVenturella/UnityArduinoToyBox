@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Button\IncomingSerial.cs" />
+    <Compile Include="Assets\Scripts\IntroScene\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\OpenMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Anthony/Documents/Unity/Projects/UnityArduinoToyBox/Unity/UnityArduinoToyBox/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
