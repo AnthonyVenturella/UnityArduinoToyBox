@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Joystick\JoystickSerial.cs" />
     <Compile Include="Assets\Scripts\LEDlights\ToggleLights.cs" />
     <Compile Include="Assets\Scripts\OpenMenu.cs" />
+    <Compile Include="Assets\Scripts\USsensor\SonicSerial.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Anthony/Documents/Unity/Projects/UnityArduinoToyBox/Unity/UnityArduinoToyBox/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

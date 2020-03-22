@@ -57,4 +57,14 @@ public class ToggleLights : MonoBehaviour{
         //closes the port on script disable. i.e. when a scene change happens if this isnt made persistent
         if (connection.IsOpen) { connection.Close(); }
     }
+
+    //TODO
+    public static string SetPortName(string defaultPortName) {
+        return "";
+    }
+
+    //TODO
+    public static int setBaudRate(int defaultBaudRate) {
+        return 0;
+    }
 }
