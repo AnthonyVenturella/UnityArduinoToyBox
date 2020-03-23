@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿//TODO:
+//  - Polish the code
+//  - Prompt user for input of PortName
+//  - Prompt User for input of BaudRate
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
