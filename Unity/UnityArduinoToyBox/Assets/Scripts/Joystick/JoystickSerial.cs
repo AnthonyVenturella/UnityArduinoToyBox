@@ -16,7 +16,7 @@ public class JoystickSerial : MonoBehaviour{
     static SerialPort connection;
 
     //TODO: make these fillable by the user
-    string portName = "COM4";
+    string portName = "COM3";
     int baudRate = 9600;
 
     void Start() {
@@ -77,7 +77,7 @@ public class JoystickSerial : MonoBehaviour{
             float zPos = mapValue(Z, 0, 1023, -25, 25);
 
             Debug.Log("X Unity World Value is: " + xPos);
-            Debug.Log("Y Unity World Value is: " + zPos);
+            Debug.Log("Z Unity World Value is: " + zPos);
 
             moveableBox.transform.position = new Vector3(xPos, 0f, zPos);
         }

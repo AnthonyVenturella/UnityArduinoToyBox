@@ -13,7 +13,7 @@ public class ToggleLights : MonoBehaviour{
     static SerialPort connection;
 
     //TODO: make these fillable by the user
-    string portName = "COM4";
+    string portName = "COM3";
     int baudRate = 9600;
 
     void Start() {

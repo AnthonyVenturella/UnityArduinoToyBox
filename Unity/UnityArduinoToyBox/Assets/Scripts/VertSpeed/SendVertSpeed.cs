@@ -16,7 +16,7 @@ public class SendVertSpeed : MonoBehaviour{
     static SerialPort connection;
 
     //TODO: make these fillable by the user
-    string portName = "COM4";
+    string portName = "COM3";
     int baudRate = 9600;
 
     void Start() {
@@ -41,7 +41,7 @@ public class SendVertSpeed : MonoBehaviour{
         rb = flyingBlock.GetComponent<Rigidbody>();
 
         if (Input.GetButtonDown("Jump")) {
-            rb.velocity = new Vector3(0, 10, 0);
+            rb.velocity = new Vector3(0, 10, 0) + rb.velocity;
 
         }
 
