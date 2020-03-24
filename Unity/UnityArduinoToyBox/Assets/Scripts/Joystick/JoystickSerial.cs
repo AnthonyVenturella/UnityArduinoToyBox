@@ -16,7 +16,7 @@ public class JoystickSerial : MonoBehaviour{
     static SerialPort connection;
 
     //TODO: make these fillable by the user
-    string portName = "COM3";
+    string portName = "COM4";
     int baudRate = 9600;
 
     void Start() {
