@@ -1,3 +1,37 @@
+/** HEADER *******************************************************************
+ * Author: Anthony Venturella                                                *
+ * GitHub: https://github.com/AnthonyVenturella/UnityArduinoToyBox           *
+ *---------------------------------------------------------------------------*/
+/*  Description                                                              *
+ *  USsensor:                                                                *
+ *    Program constantly sends its read distance to serial to be picked up   *
+ *    by the unity program. Outputto serial is distance from sensor to some  *
+ *    object in cm.                                                          *
+ *---------------------------------------------------------------------------*/
+/*  Expected Board Layout:                                                   *
+ *                                                                           *
+ *      +-+           +---+                                                  *
+ *    +-|P|-----------|USB|---+                                              *
+ *    | |W|           +---+   |                                              *
+ *    | |R|                   |                                              *
+ *    | +-+            AREF[ ]|                                              *
+ *    |                 GND[-]|---+                                          *
+ *    |[ ]IOREF   LED[+] 13[ ]|   |          |==========|                    *
+ *    |[ ]RESET          12[ ]|   +----------]GND       |                    *
+ *    |[ ]3.3V           11[ ]|              |          |                    *
+ * +--|[+]5V             10[ ]|       +------]Echo      |                    *
+ * |  |[ ]GND             9[ ]|       |      |          | US sensor          *
+ * |  ~                       ~   +---|------]Trig      |                    *
+ * |  |[ ]VIN             7[+]|---+   |      |          |                    *
+ * |  |                   6[-]|-------+   +--]Vcc       |                    *
+ * |  ~                       ~           |  |==========|                    *
+ * |  |                 ______/           |                                  *
+ * |   \_______________/                  |                                  *
+ * |                                      |                                  *
+ * +--------------------------------------+                                  *
+ *                                                                           *
+ *****************************************************************************/
+
 //serial output is in cm
 
 const int trigPin = 7;
