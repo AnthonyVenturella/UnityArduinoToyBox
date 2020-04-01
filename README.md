@@ -16,9 +16,11 @@ Unity version: 2019.3.0f6
 
 
 # The below are somewhat working, but need heavy work.
+I think its because they continuously spam the serial with data, and that data isn't able to be processed quick enough. The below will start to lag behind very quickly.
 
 ## Joystick.ino / Joystick Scene
 ![](Media/Joystick.gif)
+Joystick code needs a lot of work as the deadzone seems large and it has a tendincy to only move along one axis at a time.
 
 
 ## USsensor.ino / USsensor Scene
