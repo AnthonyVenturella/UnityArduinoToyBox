@@ -15,6 +15,8 @@ Unity version: 2019.3.0f6
 ![](Media/VertSpeed.gif)
 
 
+# The below are somewhat working, but need heavy work.
+
 ## Joystick.ino / Joystick Scene
 ![](Media/Joystick.gif)
 
