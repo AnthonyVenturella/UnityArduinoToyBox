@@ -16,7 +16,7 @@ If Arduino is hooked up right, and unity is running with no errors you should be
 ### Button.ino / Button Scene
 ![Button](Media/Button.gif)
 
-##Button:
+## Button:
 
 This ones an output from the Arduino to Unity. Its simple and straight forward, the Arduino sends a simple packet to Unity and Unity reads it in and changes the color of the block. The color change is random but seemingly instantaneous.
 
@@ -24,7 +24,7 @@ This ones an output from the Arduino to Unity. Its simple and straight forward, 
 ### Read_LED.ino / LEDlights Scene
 ![LED Lights](Media/LEDLights.gif)
 
-##LEDLights:
+## LEDLights:
 
 This one is an output from Unity to the Arduino. It is also simple and straight forward, When a user selects a button that button sends a unique value to the Arduino that corresponds to that colors pin-out. The Arduino reads it and then toggles the correct pin (the last menu option turns them all off).
 
