@@ -13,26 +13,26 @@ Unity project contains several scenes. Intro scene will take you to the differen
 You will need to edit each of the unity scripts to change the com port your Arduino is hooked up to
 If Arduino is hooked up right, and unity is running with no errors you should be connected and able to interact
 
-### Button.ino / Button Scene
+## Button.ino / Button Scene
 ![Button](Media/Button.gif)
 
-## Button:
+### Button:
 
 This ones an output from the Arduino to Unity. Its simple and straight forward, the Arduino sends a simple packet to Unity and Unity reads it in and changes the color of the block. The color change is random but seemingly instantaneous.
 
 
-### Read_LED.ino / LEDlights Scene
+## Read_LED.ino / LEDlights Scene
 ![LED Lights](Media/LEDLights.gif)
 
-## LEDLights:
+### LEDLights:
 
 This one is an output from Unity to the Arduino. It is also simple and straight forward, When a user selects a button that button sends a unique value to the Arduino that corresponds to that colors pin-out. The Arduino reads it and then toggles the correct pin (the last menu option turns them all off).
 
 
-### Read_VertSpeed.ino / VertSpeed Scene
+## Read_VertSpeed.ino / VertSpeed Scene
 ![](Media/VertSpeed.gif)
 
-## VertSpeed:
+### VertSpeed:
 
 This ones an output from Unity to the Arduino. Unity sends the blocks velocity to the Arduino via serial, and the Arduino takes that packet and maps it to the range of motion for this vertical speed display. You'll notice as the block reaches its highest point the VertSpeed display reads zero, and you can just catch when it hits the ground it snaps back to zero as well. The space bar adds +10 to its upward velocity. This display is just a small servo (the one that usually comes in Arduino kits) inside a 3D printed display. The Arduino code is specifically calibrated for this display and the range of motion can be edited.
 
